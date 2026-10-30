@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { HomeCtaBand } from "@/components/sections/HomeCtaBand";
 import { HomeHero } from "@/components/sections/HomeHero";
+import { HomeIntro } from "@/components/sections/HomeIntro";
+import { HomeServicesTeaser } from "@/components/sections/HomeServicesTeaser";
 
 export const metadata: Metadata = {
   title: {
@@ -10,5 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomeHero />;
+  return (
+    <>
+      <HomeHero />
+      <HomeIntro />
+      <HomeServicesTeaser />
+      <HomeCtaBand />
+    </>
+  );
 }
