@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Next.js / build
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# Env / secrets (.env.example may be committed intentionally)
+.env
+.env.*
+!.env.example
+
+# Logs & debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Test / coverage / cache
+coverage/
+.turbo/
+.cache/
+.eslintcache
+.prettiercache
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursor/
+
+# Vercel
+.vercel
