@@ -1,26 +1,186 @@
 @import "tailwindcss";
 
+/*
+  :root holds canonical brand values (always emitted).
+  @theme inline maps them to Tailwind v4 utility namespaces.
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surfaces — light-first (no OS dark override for brand) */
+  --background: #f7f8fa;
+  --foreground: #003060;
+
+  --navy-950: #001a36;
+  --navy-900: #002448;
+  --navy-800: #003060;
+  --navy-700: #0a3f73;
+  --navy-600: #1a568f;
+
+  --orange-500: #f88800;
+  --orange-600: #e07a00;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+
+  --grey-50: #f7f8fa;
+  --grey-100: #eef1f5;
+  --grey-200: #dce3ec;
+  --grey-300: #c5cdd8;
+  --grey-500: #64748b;
+  --grey-600: #4a5563;
+  --grey-800: #1e293b;
+
+  --white: #ffffff;
+  --success: #166534;
+  --error: #b91c1c;
+  --focus-ring: #1a568f;
+
+  --type-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8125rem);
+  --type-xs-leading: 1.4;
+  --type-sm: clamp(0.875rem, 0.85rem + 0.15vw, 0.9375rem);
+  --type-sm-leading: 1.5;
+  --type-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --type-base-leading: 1.6;
+  --type-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --type-lg-leading: 1.5;
+  --type-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  --type-xl-leading: 1.25;
+  --type-2xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  --type-2xl-leading: 1.15;
+  --type-3xl: clamp(2.5rem, 1.8rem + 2.5vw, 4rem);
+  --type-3xl-leading: 1.05;
+
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-96: 6rem;
+  --space-128: 8rem;
+  --space-section: clamp(4rem, 6vw, 8rem);
+
+  --width-content: 72.5rem; /* 1160px */
+  --width-prose: 65ch;
+
+  --brand-radius-none: 0px;
+  --brand-radius-sm: 2px;
+  --brand-radius-md: 4px;
+
+  --brand-shadow-soft: 0 1px 2px rgb(0 48 96 / 0.06);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-navy: var(--navy-800);
+
+  --color-orange-500: var(--orange-500);
+  --color-orange-600: var(--orange-600);
+  --color-orange-700: var(--orange-700);
+  --color-orange-800: var(--orange-800);
+  --color-orange: var(--orange-500);
+
+  --color-grey-50: var(--grey-50);
+  --color-grey-100: var(--grey-100);
+  --color-grey-200: var(--grey-200);
+  --color-grey-300: var(--grey-300);
+  --color-grey-500: var(--grey-500);
+  --color-grey-600: var(--grey-600);
+  --color-grey-800: var(--grey-800);
+
+  --color-white: var(--white);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-ring: var(--focus-ring);
+
+  --font-sans: var(--font-source-sans), "Source Sans 3", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: var(--font-archivo), Archivo, ui-sans-serif, system-ui,
+    sans-serif;
+
+  --text-xs: var(--type-xs);
+  --text-xs--line-height: var(--type-xs-leading);
+  --text-sm: var(--type-sm);
+  --text-sm--line-height: var(--type-sm-leading);
+  --text-base: var(--type-base);
+  --text-base--line-height: var(--type-base-leading);
+  --text-lg: var(--type-lg);
+  --text-lg--line-height: var(--type-lg-leading);
+  --text-xl: var(--type-xl);
+  --text-xl--line-height: var(--type-xl-leading);
+  --text-2xl: var(--type-2xl);
+  --text-2xl--line-height: var(--type-2xl-leading);
+  --text-3xl: var(--type-3xl);
+  --text-3xl--line-height: var(--type-3xl-leading);
+
+  --spacing-section: var(--space-section);
+  --spacing-4: var(--space-4);
+  --spacing-8: var(--space-8);
+  --spacing-12: var(--space-12);
+  --spacing-16: var(--space-16);
+  --spacing-24: var(--space-24);
+  --spacing-32: var(--space-32);
+  --spacing-48: var(--space-48);
+  --spacing-64: var(--space-64);
+  --spacing-96: var(--space-96);
+  --spacing-128: var(--space-128);
+
+  --container-content: var(--width-content);
+  --max-width-content: var(--width-content);
+  --max-width-prose: var(--width-prose);
+
+  --radius-none: var(--brand-radius-none);
+  --radius-sm: var(--brand-radius-sm);
+  --radius-md: var(--brand-radius-md);
+
+  --shadow-soft: var(--brand-shadow-soft);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    color-scheme: light;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: var(--type-base);
+    line-height: var(--type-base-leading);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
