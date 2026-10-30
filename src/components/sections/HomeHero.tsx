@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Heading } from "@/components/ui/Heading";
 import { contactCta } from "@/components/layout/nav";
+import { homeHero } from "@/content/home";
 
+/**
+ * Home hero.
+ * DRAFT — PENDING OWNER APPROVAL — copy lives in src/content/home.ts (homeHero).
+ * Do not show draft labels in the public UI.
+ */
 export function HomeHero() {
   return (
     <section className="relative w-full overflow-x-hidden border-b border-grey-200 bg-white">
@@ -18,13 +24,14 @@ export function HomeHero() {
               />
 
               <div className="flex flex-col gap-5">
+                {/* DRAFT — PENDING OWNER APPROVAL */}
                 <Heading level={1} className="gap-0">
-                  Dari ide menjadi ruang yang terwujud.
+                  {homeHero.heading}
                 </Heading>
 
+                {/* DRAFT — PENDING OWNER APPROVAL */}
                 <p className="max-w-prose text-pretty text-lg leading-relaxed text-grey-600">
-                  Layanan desain arsitektur dan konstruksi dalam satu pendekatan
-                  Design & Build, dari tahap perencanaan hingga pelaksanaan.
+                  {homeHero.lead}
                 </p>
               </div>
 

@@ -2,19 +2,14 @@ import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 import { Container } from "@/components/ui/Container";
 import { TextLink } from "@/components/ui/TextLink";
-import {
-  footerBrand,
-  footerContact,
-  footerCopyright,
-  footerNav,
-} from "@/content/footer";
+import { footerBrand, footerNav } from "@/content/footer";
 
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-grey-200 bg-grey-50">
       <Container className="py-12 lg:py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-          <div className="flex flex-col gap-5 md:col-span-2 lg:col-span-1">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12">
+          <div className="flex flex-col gap-5">
             <Link
               href="/"
               aria-label="KETEMU & Co."
@@ -59,25 +54,10 @@ export function Footer() {
               </ul>
             </nav>
           </div>
-
-          <div className="flex flex-col gap-4">
-            <p className="font-display text-sm font-semibold tracking-wide text-navy-800">
-              Kontak
-            </p>
-            <ul className="flex flex-col gap-3 text-sm leading-relaxed text-grey-600">
-              {/* DUMMY — REPLACE BEFORE PRODUCTION */}
-              <li>{footerContact.email}</li>
-              {/* DUMMY — REPLACE BEFORE PRODUCTION */}
-              <li>{footerContact.whatsapp}</li>
-              {/* DUMMY — REPLACE BEFORE PRODUCTION */}
-              <li>{footerContact.address}</li>
-            </ul>
-          </div>
         </div>
 
         <div className="mt-10 border-t border-grey-200 pt-6">
-          {/* DUMMY — REPLACE BEFORE PRODUCTION */}
-          <p className="text-sm text-grey-600">{footerCopyright.line}</p>
+          <p className="text-sm text-grey-600">{footerBrand.name}</p>
         </div>
       </Container>
     </footer>

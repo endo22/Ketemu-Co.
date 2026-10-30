@@ -1,8 +1,15 @@
 /**
- * Homepage below-fold copy.
+ * Homepage copy.
  * DRAFT — PENDING OWNER APPROVAL
  * Not official company information until the owner approves publication.
  */
+
+export const homeHero = {
+  /** DRAFT — PENDING OWNER APPROVAL */
+  heading: "Dari ide menjadi ruang yang terwujud.",
+  /** DRAFT — PENDING OWNER APPROVAL */
+  lead: "Layanan desain arsitektur dan konstruksi dalam satu pendekatan Design & Build, dari tahap perencanaan hingga pelaksanaan.",
+} as const;
 
 export const homeIntro = {
   /** DRAFT — PENDING OWNER APPROVAL */

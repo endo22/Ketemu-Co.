@@ -1,5 +1,7 @@
 /**
  * Footer content for KETEMU & Co.
+ * Brand description: DRAFT — PENDING OWNER APPROVAL
+ * Contact channels and copyright year: not available — do not render placeholders.
  */
 
 export const footerBrand = {
@@ -14,18 +16,3 @@ export const footerNav = [
   { label: "Beranda", href: "/" },
   { label: "Kontak", href: "/contact" },
 ] as const;
-
-export const footerContact = {
-  // DUMMY — REPLACE BEFORE PRODUCTION
-  email: "[EMAIL DUMMY]",
-  // DUMMY — REPLACE BEFORE PRODUCTION
-  whatsapp: "[NOMOR WHATSAPP DUMMY]",
-  // DUMMY — REPLACE BEFORE PRODUCTION
-  address: "[ALAMAT KANTOR DUMMY]",
-} as const;
-
-export const footerCopyright = {
-  // DUMMY — REPLACE BEFORE PRODUCTION
-  year: "[TAHUN COPYRIGHT DUMMY]",
-  line: "© [TAHUN COPYRIGHT DUMMY] KETEMU & Co.",
-} as const;
