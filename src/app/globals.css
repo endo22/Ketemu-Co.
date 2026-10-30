@@ -121,17 +121,8 @@
   --text-3xl: var(--type-3xl);
   --text-3xl--line-height: var(--type-3xl-leading);
 
+  /* Named only — do not map numeric --spacing-* (collides with Tailwind scale). */
   --spacing-section: var(--space-section);
-  --spacing-4: var(--space-4);
-  --spacing-8: var(--space-8);
-  --spacing-12: var(--space-12);
-  --spacing-16: var(--space-16);
-  --spacing-24: var(--space-24);
-  --spacing-32: var(--space-32);
-  --spacing-48: var(--space-48);
-  --spacing-64: var(--space-64);
-  --spacing-96: var(--space-96);
-  --spacing-128: var(--space-128);
 
   --container-content: var(--width-content);
   --max-width-content: var(--width-content);
