@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Source_Sans_3 } from "next/font/google";
+import { Header } from "@/components/layout/Header";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -28,7 +29,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="id"
       className={`${archivo.variable} ${sourceSans.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col font-sans">
+        <a
+          href="#main"
+          className="absolute left-4 top-[-5rem] z-[100] bg-navy-800 px-4 py-3 font-sans text-sm font-medium text-white outline-none transition-[top] focus:top-4 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-navy-600"
+        >
+          Lewati ke konten utama
+        </a>
+        <Header />
+        <main id="main" tabIndex={-1} className="flex flex-1 flex-col outline-none">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
