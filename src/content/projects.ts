@@ -67,6 +67,11 @@ export type ConceptualVisual = {
   caption: string;
 };
 
+export type ProjectSpecification = {
+  label: string;
+  value: string;
+};
+
 export type ConceptualProject = {
   slug: string;
   title: string;
@@ -75,12 +80,15 @@ export type ConceptualProject = {
   summary: string;
   locationLabel: string;
   designConcept: string;
+  challenge: string;
+  solution: string;
   scope: readonly string[];
   area: SimulatedMetric;
   budgetEstimate: SimulatedMetric;
   duration: SimulatedMetric;
   body: string;
   highlights: readonly string[];
+  specifications: readonly ProjectSpecification[];
   visuals: readonly ConceptualVisual[];
   /** Every project must carry the conceptual portfolio label. */
   statusLabel: typeof demoLabels.conceptual;
@@ -97,6 +105,10 @@ export const projects = [
     locationLabel: "Pinggiran kota tropis (lokasi simulasi)",
     designConcept:
       "Tropical contemporary dengan penekanan cross ventilation: deretan bukaan berseberangan, atap yang menaungi, dan teras dalam yang menahan panas sebelum masuk ke inti rumah.",
+    challenge:
+      "Bagaimana menyusun hunian satu lantai yang tetap sejuk di siang hari tanpa bergantung penuh pada pendingin udara, sambil menjaga zona publik dan privat tetap jelas.",
+    solution:
+      "Massa memanjang timur–barat, teras dalam sebagai buffer termal, overstek lebar, dan kisi yang dapat diatur sesuai musim hujan maupun kemarau.",
     scope: [
       "Perencanaan tapak dan orientasi massa terhadap angin setempat",
       "Desain arsitektur hunian satu lantai dengan zona publik–privat yang jelas",
@@ -122,6 +134,12 @@ export const projects = [
       "Overstek lebar untuk menekan radiasi pada fasad kaca",
       "Zonasi publik–privat tanpa koridor panjang yang membosankan",
       "Detail kisi yang bisa dibuka bertahap sesuai musim hujan dan kemarau",
+    ],
+    specifications: [
+      { label: "Tipologi", value: "Hunian satu lantai — skenario simulasi" },
+      { label: "Struktur", value: "Struktur ringan + atap beroverstek" },
+      { label: "Iklim", value: "Tropis panas-lembap (asumsi tapak)" },
+      { label: "Status", value: "Proyek konseptual presentasi" },
     ],
     visuals: [
       {
@@ -158,6 +176,10 @@ export const projects = [
     locationLabel: "Kawasan residensial mapan (lokasi simulasi)",
     designConcept:
       "Adaptive reuse dengan bahasa clean modern: struktur utama dipertahankan, sementara selasar kaca-bata menjadi sendi baru antara zona basah lama dan ruang berkumpul yang diperluas.",
+    challenge:
+      "Dapur lama terisolasi di belakang; membongkar seluruh massa akan membuang karakter atap genteng dan mengganggu hunian selama renovasi.",
+    solution:
+      "Menyisipkan selasar cahaya sebagai sendi baru, membuka dinding secara selektif, dan merancang tahapan agar sebagian rumah tetap dapat dihuni.",
     scope: [
       "Audit konsep terhadap massa dan bukaan eksisting (skenario simulasi)",
       "Perencanaan selasar penghubung dapur–ruang makan",
@@ -183,6 +205,12 @@ export const projects = [
       "Selasar sebagai jalur cahaya sekaligus sirkulasi harian",
       "Strategi menghuni sebagian selama tahapan renovasi konsep",
       "Material baru yang tenang agar tidak menelan tekstur dinding lama",
+    ],
+    specifications: [
+      { label: "Tipologi", value: "Renovasi rumah tapak — skenario simulasi" },
+      { label: "Fokus", value: "Selasar + dapur + ruang makan" },
+      { label: "Pendekatan", value: "Adaptive reuse terfokus" },
+      { label: "Status", value: "Proyek konseptual presentasi" },
     ],
     visuals: [
       {
@@ -219,6 +247,10 @@ export const projects = [
     locationLabel: "Koridor usaha urban (lokasi simulasi)",
     designConcept:
       "Structural minimal dan fasad netral: rangka dan partisi diekspos secara terkendali, sementara kulit luar tetap tenang agar mudah beradaptasi dengan konteks ruko atau deret komersial.",
+    challenge:
+      "Ruang konsultasi di lantai dasar harus terasa terbuka ke jalan tanpa kehilangan privasi kerja dan ketahanan terhadap lalu-lalang pengunjung.",
+    solution:
+      "Fasad kisi dengan densitas berbeda per zona, grid kolom sebagai alat organisasi, serta material lantai dan partisi yang tahan intensitas kunjungan.",
     scope: [
       "Tata letak zona resepsi, ruang diskusi, dan area kerja staf",
       "Desain fasad lantai dasar yang permeable namun tetap menjaga privasi",
@@ -244,6 +276,12 @@ export const projects = [
       "Grid struktur sebagai alat organisasi ruang, bukan ornamen",
       "Hierarki privasi dari resepsi hingga ruang diskusi tertutup",
       "Detail material yang tahan intensitas kunjungan harian",
+    ],
+    specifications: [
+      { label: "Tipologi", value: "Fit-out komersial lantai dasar" },
+      { label: "Program", value: "Resepsi · diskusi · open desk" },
+      { label: "Fasad", value: "Kisi aluminium vertikal (konsep)" },
+      { label: "Status", value: "Proyek konseptual presentasi" },
     ],
     visuals: [
       {
@@ -280,6 +318,10 @@ export const projects = [
     locationLabel: "Apartemen open-plan (lokasi simulasi)",
     designConcept:
       "Warm minimal dengan layered lighting: langit-langit dan furnitur rendah mengatur zona tanpa dinding penuh, sementara lapisan cahaya ambient, task, dan aksen menggantikan sekat keras.",
+    challenge:
+      "Unit open-plan sempit mudah terasa sempit dan gelap di tengah denah jika mengandalkan dinding penuh dan satu titik lampu.",
+    solution:
+      "Built-in rendah sebagai pembatas lunak, menarik cahaya ke tengah, serta tiga lapisan pencahayaan untuk siang dan malam yang berbeda peran.",
     scope: [
       "Zoning open-plan menjadi area kerja, lounge, dan tidur fleksibel",
       "Desain furnitur built-in rendah sebagai pembatas lunak",
@@ -305,6 +347,12 @@ export const projects = [
       "Built-in rendah menggantikan dinding penuh di unit kecil",
       "Tiga lapisan pencahayaan untuk siang dan malam yang berbeda peran",
       "Palet hangat yang menjaga skala ruang tetap lega",
+    ],
+    specifications: [
+      { label: "Tipologi", value: "Interior unit open-plan" },
+      { label: "Luas konsep", value: "± 54 m² (simulasi)" },
+      { label: "Pendekatan", value: "Warm minimal + layered lighting" },
+      { label: "Status", value: "Proyek konseptual presentasi" },
     ],
     visuals: [
       {

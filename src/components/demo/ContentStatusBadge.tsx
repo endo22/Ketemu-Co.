@@ -10,10 +10,9 @@ type ContentStatusBadgeProps = {
 };
 
 const variantClassName: Record<DemoBadgeVariant, string> = {
-  conceptual:
-    "border-navy-800 bg-navy-800 text-white",
-  simulated:
-    "border-grey-300 bg-grey-100 text-navy-800",
+  conceptual: "border-navy-800 bg-navy-800 text-white",
+  simulated: "border-grey-300 bg-grey-100 text-navy-800",
+  author: "border-orange-700 bg-white text-orange-800",
 };
 
 export function ContentStatusBadge({

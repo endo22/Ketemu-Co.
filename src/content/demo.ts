@@ -3,7 +3,7 @@
  * Visible to visitors — intentional, not a draft marker.
  */
 
-export type DemoBadgeVariant = "conceptual" | "simulated";
+export type DemoBadgeVariant = "conceptual" | "simulated" | "author";
 
 export const demoSiteBanner = {
   title: "DEMO WEBSITE",
@@ -14,4 +14,5 @@ export const demoSiteBanner = {
 export const demoLabels = {
   conceptual: "PROYEK KONSEPTUAL",
   simulated: "DATA SIMULASI",
+  author: "PENULIS DEMO",
 } as const satisfies Record<DemoBadgeVariant, string>;

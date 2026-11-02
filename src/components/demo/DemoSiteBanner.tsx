@@ -4,7 +4,8 @@ import { demoSiteBanner } from "@/content/demo";
 export function DemoSiteBanner() {
   return (
     <div
-      role="status"
+      role="note"
+      aria-label={demoSiteBanner.title}
       className="border-b border-navy-900 bg-navy-800 text-white"
     >
       <Container className="flex min-h-10 flex-col justify-center gap-0.5 py-2 sm:flex-row sm:items-center sm:gap-3 sm:py-0">

@@ -19,10 +19,11 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: {
-    default: "KETEMU & Co.",
+    default: "KETEMU & Co. — Demo Website",
     template: "%s · KETEMU & Co.",
   },
-  description: "Website resmi KETEMU & Co.",
+  description:
+    "Website demonstrasi KETEMU & Co. Portofolio dan informasi simulasi ditampilkan untuk kebutuhan presentasi Architecture & Design Build.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
